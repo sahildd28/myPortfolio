@@ -13,7 +13,7 @@ function AboutCard() {
             <br />
             I am currently employed as a <span className="purple"> Software developer</span> at TCS.
             <br />
-            I have completed B.Tech in Computer Science and Computing at RAIT DY Patil,
+            I have completed B.Tech in <span className="purple"> Computer Science </span> at RAIT DY Patil,
             Navi Mumbai.
             <br />
             <br />
