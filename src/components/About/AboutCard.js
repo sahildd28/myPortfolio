@@ -11,10 +11,20 @@ function AboutCard() {
             Hi Everyone, I am <span className="purple">Sahil Dhamnaskar </span>
             from <span className="purple"> Maharashtra, India.</span>
             <br />
-            I am currently employed as a <span className="purple"> Software developer</span> at TCS.
+            I&apos;m a dynamic, results-driven{" "}
+            <span className="purple">Software Developer</span> at
+            <span className="purple"> Tata Consultancy Services</span>, where I
+            lead end-to-end Salesforce, cloud, and agentic AI solutions that
+            improve performance and efficiency by well over{" "}
+            <span className="purple">50%</span>.
             <br />
-            I have completed B.Tech in <span className="purple"> Computer Science </span> at RAIT DY Patil,
-            Navi Mumbai.
+            I architect scalable products across Apex, Lightning Web Components,
+            FastAPI, React, and intelligent automation to unlock measurable
+            business impact.
+            <br />I earned my B.Tech in{" "}
+            <span className="purple">Computer Science </span> from RAIT DY
+            Patil, Navi Mumbai, and continue to explore emerging technologies
+            through R&amp;D POCs.
             <br />
             <br />
             Apart from coding, some other activities that I love to do!

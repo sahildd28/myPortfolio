@@ -1,84 +1,51 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import { CgCPlusPlus } from "react-icons/cg";
+import { DiJavascript1, DiReact, DiPython, DiJava } from "react-icons/di";
 import {
-  DiJavascript1,
-  DiReact,
-  DiAngularSimple,
-  DiNodejs,
-  DiMongodb,
-  DiPython,
-  DiGit,
-  DiJava,
-  DiSpring,
-} from "react-icons/di";
-import {
-  SiRedis,
-  SiFirebase,
-  SiNextdotjs,
-  SiSolidity,
-  SiPostgresql,
   SiSalesforce,
   SiSpringboot,
-  SiLightning,
-  SiPostman,
-  SiOpenapi,
-  SiExpo
+  SiFastapi,
+  SiDocker,
+  SiTailwindcss,
+  SiTypescript,
+  SiMicrosoftazure,
+  SiOpenai,
+  SiPostgresql,
+  SiSqlite,
 } from "react-icons/si";
-import { TbBrandGolang } from "react-icons/tb";
-import { TbApi } from "react-icons/tb";
+import { GiArtificialIntelligence } from "react-icons/gi";
+import { TbBolt } from "react-icons/tb";
+
+const TECH_STACK = [
+  { icon: SiSalesforce, label: "Salesforce" },
+  { icon: TbBolt, label: "Lightning Web" },
+  { icon: DiReact, label: "React" },
+  { icon: SiTailwindcss, label: "Tailwind CSS" },
+  { icon: DiJava, label: "Java" },
+  { icon: SiSpringboot, label: "Spring Boot" },
+  { icon: SiFastapi, label: "FastAPI" },
+  { icon: DiPython, label: "Python" },
+  { icon: SiDocker, label: "Docker" },
+  { icon: DiJavascript1, label: "JavaScript" },
+  { icon: SiTypescript, label: "TypeScript" },
+  { icon: SiMicrosoftazure, label: "Azure" },
+  { icon: SiOpenai, label: "OpenAI" },
+  { icon: SiPostgresql, label: "PostgreSQL" },
+  { icon: SiSqlite, label: "SQLite" },
+  { icon: GiArtificialIntelligence, label: "AI/ML" },
+];
 
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiSalesforce />
-      </Col>      
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiNodejs />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiAngularSimple />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJava />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiSpringboot />
-      </Col>     
-      <Col xs={4} md={2} className="tech-icons">
-        <TbApi />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiExpo />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <CgCPlusPlus />
-      </Col>                    
-      <Col xs={4} md={2} className="tech-icons">
-        <DiMongodb />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiNextdotjs />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiFirebase />
-      </Col>     
-      <Col xs={4} md={2} className="tech-icons">
-        <SiPostgresql />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
-      </Col>            
+      {TECH_STACK.map(({ icon: Icon, label }) => (
+        <Col xs={6} sm={4} md={3} lg={2} className="tech-icons" key={label}>
+          <div className="tech-icon-card">
+            <Icon className="tech-icon-symbol" aria-hidden="true" />
+            <span className="tech-icon-label">{label}</span>
+          </div>
+        </Col>
+      ))}
     </Row>
   );
 }
