@@ -2,11 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
-import {
-  AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
-} from "react-icons/ai";
+import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
 function Home2() {
@@ -19,37 +15,23 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
+              I&apos;m a dynamic, results-driven software developer who thrives
+              on shipping production-grade, scalable solutions.
               <br />
-              <br />I am fluent in classics like
-              <i>
-                <b className="purple"> Salesforce, Javascript and NodeJs. </b>
-              </i>
-              <br />
-              <br />
-              My field of Interest's are building new &nbsp;
-              <i>
-                <b className="purple">Augmented Reality and AI </b> and
-                also in areas related to{" "}
-                <b className="purple">
-                  Android and IOS cross-Platform App Development .
-                </b>
-              </i>
+              <br />I specialize in architecting end-to-end Salesforce
+              ecosystems, crafting intelligent agentic AI platforms, and
+              building cloud integrations that accelerate business outcomes by
+              50% or more.
               <br />
               <br />
-              Whenever possible, I also apply my passion for developing products
-              with <b className="purple">Node.js</b> and
-              <i>
-                <b className="purple">
-                  {" "}
-                  Modern Javascript Library and Frameworks
-                </b>
-              </i>
-              &nbsp; like
-              <i>
-                <b className="purple"> React.js and Next.js</b>
-              </i>
+              My toolkit spans Apex, Lightning Web Components, FastAPI, React,
+              Tailwind, Python, and Java — powered by data platforms like
+              Postgres, SQLite, and Pinecone with Azure and NVIDIA
+              infrastructure.
+              <br />
+              <br />I love translating complex ideas into intuitive experiences
+              and exploring emerging AI workflows that unlock real impact for
+              teams and customers.
             </p>
           </Col>
           <Col md={4} className="myAvtar">
@@ -74,7 +56,7 @@ function Home2() {
                 >
                   <AiFillGithub />
                 </a>
-              </li>             
+              </li>
               <li className="social-icons">
                 <a
                   href="https://www.linkedin.com/in/sahil-dhamnaskar-94264817a/"
