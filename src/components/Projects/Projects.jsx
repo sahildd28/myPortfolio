@@ -88,7 +88,7 @@ function AnimatedHeading() {
   useEffect(() => {
     const t = setInterval(() => setActive((p) => (p + 1) % words.length), 1800);
     return () => clearInterval(t);
-  }, []);
+  });
 
   return (
     <div className="proj-heading-wrap">
