@@ -1,0 +1,66 @@
+/* ═══════════════════════════════════════════════════
+   Techstack.css — enhanced icon cards with groups
+   ═══════════════════════════════════════════════════ */
+
+/* ── Group wrapper ───────────────────────────────── */
+.ts-wrapper {
+  padding-bottom: 16px;
+}
+
+.ts-group {
+  margin-bottom: 36px;
+}
+
+.ts-group-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Syne", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--group-color, #38bdf8);
+  margin-bottom: 16px;
+  padding: 5px 14px 5px 10px;
+  border-radius: 999px;
+  background: rgba(56,189,248,0.06);
+  border: 1px solid rgba(56,189,248,0.16);
+}
+
+.ts-group-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--group-color, #38bdf8);
+  flex-shrink: 0;
+}
+
+/* ── Enhanced icon card ──────────────────────────── */
+.tech-icon-card--enhanced {
+  opacity: 0;
+  transform: translateY(20px) scale(0.96);
+  transition:
+    opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
+}
+
+.tech-icon-card--enhanced.tech-icon-card--vis {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Override base hover to add glow */
+.tech-icon-card--enhanced:hover {
+  transform: translateY(-5px) scale(1.04) !important;
+  box-shadow: 0 20px 36px -16px rgba(56,189,248,0.4) !important;
+  border-color: rgba(56,189,248,0.55) !important;
+  background: rgba(56,189,248,0.08) !important;
+}
+
+.tech-icon-card--enhanced:hover .tech-icon-symbol {
+  filter: drop-shadow(0 0 8px rgba(56,189,248,0.55));
+}
