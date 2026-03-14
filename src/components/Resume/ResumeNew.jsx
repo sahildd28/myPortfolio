@@ -4,7 +4,6 @@ import Particle from "../Particle";
 import pdf from "../../Assets/../Assets/Resume.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import { GiArtificialIntelligence } from "react-icons/gi";
 import { TbBrain, TbNetwork, TbPhone, TbCode } from "react-icons/tb";
 import { BsRobot, BsMortarboard, BsBuilding } from "react-icons/bs";
