@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { Container, Row, Col } from "react-bootstrap";
-import { BsArrowLeft, BsGithub, BsPlayCircle } from "react-icons/bs";
+import { Container } from "react-bootstrap";
+import { BsArrowLeft, BsGithub } from "react-icons/bs";
 import { SiGooglecloud, SiFastapi, SiPostgresql } from "react-icons/si";
 import { GiArtificialIntelligence } from "react-icons/gi";
 import { TbBrain, TbNetwork, TbPhone, TbChartBar } from "react-icons/tb";

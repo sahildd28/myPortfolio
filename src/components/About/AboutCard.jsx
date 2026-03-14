@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { ImPointRight } from "react-icons/im";
 import { GiArtificialIntelligence } from "react-icons/gi";
 import { TbBrain, TbCode } from "react-icons/tb";
 import { BsRobot, BsMortarboard } from "react-icons/bs";
