@@ -1,0 +1,317 @@
+/* ═══════════════════════════════════════════════════
+   About.css — portfolio-matched colors, elevated design
+   ═══════════════════════════════════════════════════ */
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap");
+
+/* ── Page wrapper ─────────────────────────────────── */
+.about-page {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 150px;
+  padding-bottom: 80px;
+  background-image: linear-gradient(135deg, rgba(15,23,42,0.94), rgba(11,18,33,0.95));
+  overflow: hidden;
+}
+
+/* ── Background effects ──────────────────────────── */
+.about-bg-grid {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(56,189,248,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56,189,248,0.04) 1px, transparent 1px);
+  background-size: 52px 52px;
+  pointer-events: none;
+  animation: aboutGridDrift 20s linear infinite;
+  z-index: 0;
+}
+
+@keyframes aboutGridDrift {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(52px); }
+}
+
+.about-bg-glow {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.about-bg-glow--tl {
+  top: -100px;
+  left: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(56,189,248,0.08) 0%, transparent 65%);
+  animation: glowBreathe 7s ease-in-out infinite alternate;
+}
+
+.about-bg-glow--br {
+  bottom: -80px;
+  right: -80px;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(129,140,248,0.07) 0%, transparent 65%);
+  animation: glowBreathe 9s 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowBreathe {
+  0%   { opacity: 0.5; transform: scale(1); }
+  100% { opacity: 1;   transform: scale(1.12); }
+}
+
+/* ── Inner container ─────────────────────────────── */
+.about-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Hero row ────────────────────────────────────── */
+.about-hero-row {
+  align-items: flex-start;
+  padding-bottom: 60px;
+  gap: 0;
+}
+
+.about-hero-left {
+  padding-bottom: 40px;
+}
+
+.about-hero-right {
+  padding-top: 10px;
+}
+
+.about-hero-label {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #38bdf8;
+  margin-bottom: 12px;
+  opacity: 0;
+  animation: fadeUp 0.6s 0.1s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+
+.about-hero-heading {
+  font-family: "Syne", sans-serif;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  font-weight: 800;
+  color: #e2e8f0;
+  margin-bottom: 28px;
+  line-height: 1.1;
+  opacity: 0;
+  animation: fadeUp 0.6s 0.18s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+
+.about-accent {
+  color: #38bdf8;
+}
+
+/* ── Identity panel ──────────────────────────────── */
+.about-identity {
+  background: rgba(17,32,49,0.82);
+  border: 1px solid rgba(56,189,248,0.22);
+  border-radius: 20px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 24px 48px -24px rgba(8,47,73,0.65);
+  text-align: center;
+  opacity: 0;
+  transform: translateX(-28px);
+  transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1);
+}
+
+.about-identity--vis {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Image with animated rings */
+.about-identity-img-wrap {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  flex-shrink: 0;
+}
+
+.about-identity-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(56,189,248,0.4);
+  position: relative;
+  z-index: 2;
+}
+
+.about-identity-img-ring {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(56,189,248,0.2);
+  animation: ringPulse 3s ease-in-out infinite;
+  z-index: 1;
+}
+
+.about-identity-img-ring--outer {
+  inset: -18px;
+  border-color: rgba(56,189,248,0.1);
+  animation-delay: 1s;
+}
+
+@keyframes ringPulse {
+  0%,100% { transform: scale(1);    opacity: 0.6; }
+  50%      { transform: scale(1.04); opacity: 1; }
+}
+
+/* Meta */
+.about-identity-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.about-identity-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(52,211,153,0.1);
+  border: 1px solid rgba(52,211,153,0.28);
+  color: #34d399;
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.about-identity-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #34d399;
+  animation: dotBlink 1.8s ease-in-out infinite;
+}
+
+@keyframes dotBlink {
+  0%,100% { opacity: 1; }
+  50%      { opacity: 0.3; }
+}
+
+.about-identity-name {
+  font-family: "Syne", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin: 4px 0 0;
+}
+
+.about-identity-role {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9rem;
+  color: #38bdf8;
+  margin: 0;
+  font-weight: 500;
+}
+
+.about-identity-location {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* Stats */
+.about-identity-stats {
+  display: flex;
+  gap: 0;
+  width: 100%;
+  background: rgba(12,24,40,0.6);
+  border: 1px solid rgba(56,189,248,0.15);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.about-identity-stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 14px 8px;
+  border-right: 1px solid rgba(56,189,248,0.1);
+}
+
+.about-identity-stat:last-child { border-right: none; }
+
+.about-identity-stat-val {
+  font-family: "Syne", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #38bdf8;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.about-identity-stat-lbl {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.68rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+/* ── Section divider label ───────────────────────── */
+.about-section-label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 56px 0 32px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.about-section-label--vis {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-section-label-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(56,189,248,0.3), transparent);
+}
+
+.about-section-label-text {
+  font-family: "Syne", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #38bdf8;
+  white-space: nowrap;
+  padding: 6px 20px;
+  background: rgba(56,189,248,0.08);
+  border: 1px solid rgba(56,189,248,0.22);
+  border-radius: 999px;
+}
+
+/* ── Utilities ───────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 767px) {
+  .about-page { padding-top: 100px; }
+  .about-identity { margin-bottom: 20px; }
+  .about-hero-row { flex-direction: column; }
+}

@@ -1,0 +1,307 @@
+/* ═══════════════════════════════════════════════════
+   ProjectCards.css
+   Matches portfolio CSS variables exactly
+   ═══════════════════════════════════════════════════ */
+
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500&display=swap");
+
+/* ── Card Shell ────────────────────────────────────── */
+.pc-card {
+  position: relative;
+  background: rgba(17, 32, 49, 0.82);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 24px 48px -24px rgba(8, 47, 73, 0.65);
+  transition: transform 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.42s ease;
+
+  /* Scroll reveal — start hidden */
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.pc-card--visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.42s ease,
+    border-color 0.42s ease;
+}
+
+.pc-card:hover {
+  transform: translateY(-8px) scale(1.012);
+  box-shadow: 0 32px 60px -26px rgba(56, 189, 248, 0.4);
+  border-color: rgba(56, 189, 248, 0.48);
+}
+
+/* Corner decorative accent */
+.pc-corner-accent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(
+    225deg,
+    rgba(56, 189, 248, 0.18) 0%,
+    transparent 60%
+  );
+  border-radius: 0 18px 0 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.pc-card:hover .pc-corner-accent {
+  opacity: 1.4;
+}
+
+/* ── Image Area ─────────────────────────────────────── */
+.pc-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: rgba(12, 24, 40, 0.9);
+  flex-shrink: 0;
+}
+
+.pc-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.32s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pc-img--fade {
+  opacity: 0;
+}
+
+.pc-card:hover .pc-img {
+  transform: scale(1.04);
+}
+
+/* Placeholder when no image */
+.pc-img-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    rgba(12, 24, 40, 0.95),
+    rgba(17, 32, 49, 0.9)
+  );
+}
+
+.pc-placeholder-hex {
+  font-size: 4rem;
+  color: rgba(56, 189, 248, 0.2);
+  animation: hexSpin 6s linear infinite;
+}
+
+@keyframes hexSpin {
+  0% { transform: rotate(0deg) scale(1); opacity: 0.2; }
+  50% { transform: rotate(180deg) scale(1.15); opacity: 0.4; }
+  100% { transform: rotate(360deg) scale(1); opacity: 0.2; }
+}
+
+/* Gradient overlay at bottom of image */
+.pc-img-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(11, 18, 33, 0.75) 100%
+  );
+  pointer-events: none;
+}
+
+/* ── Tags ───────────────────────────────────────────── */
+.pc-tags {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+  flex-wrap: wrap;
+}
+
+.pc-tag {
+  background: rgba(8, 15, 27, 0.82);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #38bdf8;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  backdrop-filter: blur(6px);
+}
+
+/* ── Dot Indicators ─────────────────────────────────── */
+.pc-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+
+.pc-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(226, 232, 240, 0.35);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease, width 0.25s ease;
+}
+
+.pc-dot--active {
+  background: #38bdf8;
+  width: 18px;
+  border-radius: 4px;
+  transform: none;
+}
+
+.pc-dot:hover:not(.pc-dot--active) {
+  background: rgba(56, 189, 248, 0.55);
+  transform: scale(1.3);
+}
+
+/* ── Image Count Badge ──────────────────────────────── */
+.pc-img-count {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(8, 15, 27, 0.75);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: #94a3b8;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+  z-index: 2;
+}
+
+/* ── Card Body ──────────────────────────────────────── */
+.pc-body {
+  padding: 24px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 12px;
+}
+
+.pc-title {
+  font-family: "Syne", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin: 0;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.pc-desc {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: #94a3b8;
+  margin: 0;
+  flex: 1;
+  text-align: justify;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Actions ────────────────────────────────────────── */
+.pc-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.pc-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 20px;
+  border-radius: 999px;
+  font-family: "Syne", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: all 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  white-space: nowrap;
+}
+
+.pc-btn--primary {
+  background: #38bdf8;
+  color: #0b1120;
+  box-shadow: 0 12px 24px -12px rgba(56, 189, 248, 0.5);
+}
+
+.pc-btn--primary:hover {
+  background: #0ea5e9;
+  transform: translateY(-2px);
+  box-shadow: 0 18px 32px -14px rgba(56, 189, 248, 0.65);
+  color: #0b1120;
+  text-decoration: none;
+}
+
+.pc-btn--ghost {
+  background: transparent;
+  color: #94a3b8;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.pc-btn--ghost:hover {
+  background: rgba(148, 163, 184, 0.08);
+  color: #e2e8f0;
+  transform: translateY(-2px);
+  border-color: rgba(148, 163, 184, 0.45);
+  text-decoration: none;
+}
+
+.pc-btn-icon {
+  transition: transform 0.25s ease;
+}
+
+.pc-btn--primary:hover .pc-btn-icon {
+  transform: translateX(3px);
+}
+
+/* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 767px) {
+  .pc-body {
+    padding: 18px 18px 22px;
+  }
+
+  .pc-title {
+    font-size: 1rem;
+  }
+}

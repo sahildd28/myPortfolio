@@ -1,0 +1,200 @@
+/* ═══════════════════════════════════════════════════
+   AboutCard.css
+   ═══════════════════════════════════════════════════ */
+
+/* ── Card shell ──────────────────────────────────── */
+.ac-card {
+  background: rgba(17,32,49,0.82);
+  border: 1px solid rgba(56,189,248,0.22);
+  border-radius: 20px;
+  padding: 32px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 24px 48px -24px rgba(8,47,73,0.65);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  opacity: 0;
+  transform: translateY(24px);
+  animation: acReveal 0.7s 0.25s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+
+@keyframes acReveal {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Bio ─────────────────────────────────────────── */
+.ac-bio {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ac-bio p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.97rem;
+  line-height: 1.78;
+  color: #94a3b8;
+  margin: 0;
+  text-align: justify;
+}
+
+.ac-accent {
+  color: #38bdf8;
+  font-weight: 500;
+}
+
+/* ── Highlights grid ─────────────────────────────── */
+.ac-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.ac-highlight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(56,189,248,0.14);
+  background: rgba(12,24,40,0.6);
+  cursor: default;
+  transition: transform 0.28s ease, border-color 0.28s ease, background 0.28s ease, box-shadow 0.28s ease;
+  opacity: 0;
+  animation: acItemReveal 0.5s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+
+@keyframes acItemReveal {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.ac-highlight--active,
+.ac-highlight:hover {
+  border-color: rgba(56,189,248,0.38);
+  background: rgba(56,189,248,0.07);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -12px rgba(56,189,248,0.25);
+}
+
+.ac-highlight-icon {
+  font-size: 1.35rem;
+  color: #38bdf8;
+  flex-shrink: 0;
+  transition: transform 0.28s ease;
+}
+
+.ac-highlight:hover .ac-highlight-icon {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+.ac-highlight-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.ac-highlight-label {
+  font-family: "Syne", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ac-highlight-desc {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.72rem;
+  color: #94a3b8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Hobbies ─────────────────────────────────────── */
+.ac-hobbies {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ac-hobbies-label {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin: 0;
+  font-style: italic;
+}
+
+.ac-hobbies-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.ac-hobby {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #e2e8f0;
+  background: rgba(226,232,240,0.07);
+  border: 1px solid rgba(226,232,240,0.12);
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+  cursor: default;
+}
+
+.ac-hobby:hover {
+  background: rgba(56,189,248,0.08);
+  border-color: rgba(56,189,248,0.25);
+  transform: translateY(-2px);
+}
+
+/* ── Quote ───────────────────────────────────────── */
+.ac-quote {
+  position: relative;
+  padding: 20px 24px 20px 32px;
+  border-left: 3px solid #38bdf8;
+  border-radius: 0 12px 12px 0;
+  background: rgba(56,189,248,0.05);
+}
+
+.ac-quote-mark {
+  position: absolute;
+  top: -4px;
+  left: 12px;
+  font-family: "Syne", sans-serif;
+  font-size: 3rem;
+  color: rgba(56,189,248,0.25);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.ac-quote-text {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #e2e8f0;
+  margin: 0 0 6px;
+  line-height: 1.6;
+}
+
+.ac-quote-footer {
+  font-family: "Syne", sans-serif;
+  font-size: 0.8rem;
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 600px) {
+  .ac-card { padding: 22px 18px; }
+  .ac-highlights { grid-template-columns: 1fr; }
+}
