@@ -21,7 +21,7 @@ const TOOL_GROUPS = [
     label: "AI Dev Tools",
     items: [
       { icon: SiGooglecloud, label: "Google Cloud" },
-      { icon: BsRobot,       label: "Google ADK CLI" },
+      { icon: BsRobot,       label: "Google ADK" },
       { icon: TbChartBar,    label: "LangFuse" },
       { icon: TbDatabase,    label: "Pinecone Console" },
     ],

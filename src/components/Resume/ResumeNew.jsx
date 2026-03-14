@@ -11,7 +11,10 @@ import { MdHub } from "react-icons/md";
 import { SiFastapi, SiGooglecloud } from "react-icons/si";
 import "./ResumeNew.css";
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+
+
+
+pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 // ── Data ───────────────────────────────────────────────
 const EXPERIENCE = [
@@ -31,7 +34,7 @@ const EXPERIENCE = [
     ],
   },
   {
-    period: "2022 – 2024",
+    period: "2023 – 2024",
     role: "Salesforce Developer",
     company: "Tata Consultancy Services",
     type: "salesforce",
@@ -48,7 +51,7 @@ const EXPERIENCE = [
 
 const EDUCATION = [
   {
-    period: "2018 – 2022",
+    period: "2020 – 2023",
     degree: "B.Tech — Computer Science",
     institution: "RAIT DY Patil, Navi Mumbai",
     icon: BsMortarboard,
@@ -57,7 +60,7 @@ const EDUCATION = [
 ];
 
 const CERTS = [
-  { label: "Google ADK Certified",     icon: SiGooglecloud,           color: "#38bdf8", status: "earned" },
+  { label: "Google ADK Badges",     icon: SiGooglecloud,           color: "#38bdf8", status: "earned" },
   { label: "Microsoft Azure AI Dev",   icon: GiArtificialIntelligence, color: "#818cf8", status: "in-progress" },
 ];
 
