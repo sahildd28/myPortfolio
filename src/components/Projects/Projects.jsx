@@ -115,7 +115,7 @@ function StatsBar() {
     { value: "6", label: "AI Projects" },
     { value: "3+", label: "Enterprise Clients POCs" },
     { value: "5+", label: "Agent Architectures" },
-    { value: "2yr", label: "ADK Experience" },
+    { value: "1.5yr", label: "ADK Experience" },
   ];
   const ref = useRef(null);
   const [vis, setVis] = useState(false);

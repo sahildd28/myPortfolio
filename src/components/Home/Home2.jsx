@@ -72,30 +72,34 @@ function Home2() {
                 intelligent software.
               </h1>
               <p className="home-about-body">
-                I&apos;m an AI Engineer specializing in agentic systems — building
-                production-grade, multi-agent platforms that automate complex
-                workflows and deliver real business impact.
-                <br /><br />
-                I architect intelligent pipelines using{" "}
-                <strong className="h2-strong">Google ADK</strong>, designing
-                systems with RAG reasoning, MCP integrations,
-                human-in-the-loop flows, and voice AI — from prototype to
-                client-ready delivery.
-                <br /><br />
-                My stack spans{" "}
-                <strong className="h2-strong">
-                  FastAPI, React, Python, PostgreSQL, Pinecone, LangFuse
-                </strong>
-                , and{" "}
-                <strong className="h2-strong">NVIDIA infrastructure</strong> —
-                with a strong foundation in clean OOP and enterprise-grade code
-                practices carried over from 2.5 years of Salesforce development.
-                <br /><br />
-                I turn emerging AI capabilities into intuitive, scalable
-                products — whether that&apos;s a RAG-powered planning
-                assistant, a multilingual voice bot, or an AI therapist that
-                reads your stress from a wearable.
-              </p>
+                  I&apos;m an <strong className="h2-strong">AI Engineer</strong> specializing
+                  in agentic systems — building production-grade, multi-agent platforms that
+                  automate complex workflows and deliver real business impact.
+                  <br /><br />
+                  My journey started in <strong className="h2-strong">Salesforce</strong> —
+                  where I shipped enterprise-grade solutions like a Bulk Feasibility Portal
+                  handling 1,000+ simultaneous checks, Azure–Salesforce integrations, and
+                  Cloud-Sense migrations with zero downtime. I then moved up the stack into{" "}
+                  <strong className="h2-strong">Einstein AI</strong> — implementing Forecasting
+                  and Lead Scoring — and into{" "}
+                  <strong className="h2-strong">Agentforce</strong>, designing agent-to-agent
+                  communication flows with OAuth 2.0. Each step was a deliberate climb toward
+                  one thing: intelligent, autonomous systems.
+                  <br /><br />
+                  Today I architect those systems full-time using{" "}
+                  <strong className="h2-strong">Google ADK</strong> — building multi-agent
+                  pipelines with RAG reasoning, MCP integrations, human-in-the-loop flows,
+                  and voice AI, from prototype to client-ready delivery at scale.
+                  <br /><br />
+                  My stack spans{" "}
+                  <strong className="h2-strong">
+                    FastAPI, React, Python, PostgreSQL, Pinecone, LangFuse
+                  </strong>{" "}
+                  and <strong className="h2-strong">NVIDIA infrastructure</strong> — backed
+                  by the clean OOP discipline and enterprise instincts I built over 2.5 years
+                  of Salesforce development. The foundation is Salesforce. The destination
+                  is agentic AI.
+                </p>
             </div>
           </Col>
 

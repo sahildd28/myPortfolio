@@ -4,9 +4,11 @@ import { TbBrain, TbCode } from "react-icons/tb";
 import { BsRobot, BsMortarboard } from "react-icons/bs";
 import { MdHub } from "react-icons/md";
 import "./AboutCard.css";
+import { SiSalesforce } from "react-icons/si";
 
 const HIGHLIGHTS = [
   { icon: BsRobot,                label: "Agentic AI Systems",    desc: "Multi-agent pipelines, Google ADK" },
+  { icon: SiSalesforce,                label: "Salesforce Development",    desc: "Advance level salesforce solutions" },
   { icon: TbBrain,                label: "RAG Platforms",          desc: "Pinecone, LangFuse, PostgreSQL" },
   { icon: MdHub,                  label: "MCP Integrations",       desc: "Atlassian, ServiceNow, A2A" },
   { icon: GiArtificialIntelligence, label: "Voice AI",             desc: "ElevenLabs, WhisperX, SIP" },
@@ -32,6 +34,7 @@ function AboutCard() {
           <span className="ac-accent">Sahil Dhamnaskar</span> from{" "}
           <span className="ac-accent">Maharashtra, India.</span>
         </p>
+
         <p>
           I&apos;m an <span className="ac-accent">AI Engineer</span> at{" "}
           <span className="ac-accent">Tata Consultancy Services</span>, where I
@@ -40,18 +43,28 @@ function AboutCard() {
           pipelines, RAG platforms, voice bots, and MCP integrations that drive
           measurable impact for enterprise clients.
         </p>
+
         <p>
-          I build end-to-end intelligent solutions using Google ADK, FastAPI,
-          React, and cloud-native infrastructure — grounded in{" "}
-          <span className="ac-accent">2.5 years</span> of enterprise software
-          experience that keeps my code clean, scalable, and production-ready.
+          My path here was intentional. I started as a{" "}
+          <span className="ac-accent">Salesforce Developer</span> — building
+          enterprise portals, Azure integrations, and zero-downtime migrations —
+          then moved into <span className="ac-accent">Einstein AI</span> for
+          forecasting and lead scoring, and then into{" "}
+          <span className="ac-accent">Agentforce</span>, designing secure
+          agent-to-agent communication flows. Every step was a deliberate move
+          toward autonomous, intelligent systems.
         </p>
+
         <p>
-          I earned my B.Tech in{" "}
-          <span className="ac-accent">Computer Science</span> from RAIT DY
-          Patil, Navi Mumbai, and actively explore emerging AI capabilities
-          through hands-on <span className="ac-accent">R&amp;D POCs</span> and
-          certifications.
+          Today that&apos;s all I do — full-time AI development using{" "}
+          <span className="ac-accent">Google ADK</span>, grounded in the clean
+          OOP discipline and enterprise instincts built over 2.5 years of
+          Salesforce work. I earned my B.Tech in{" "}
+          <span className="ac-accent">Computer Science</span> from RAIT DY Patil,
+          Navi Mumbai, and stay sharp through hands-on{" "}
+          <span className="ac-accent">R&amp;D POCs</span> and certifications
+          including <span className="ac-accent">Google ADK</span> and{" "}
+          <span className="ac-accent">Microsoft Azure AI</span>.
         </p>
       </div>
 
