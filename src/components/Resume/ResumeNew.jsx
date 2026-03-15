@@ -8,7 +8,7 @@ import { GiArtificialIntelligence } from "react-icons/gi";
 import { TbBrain, TbNetwork, TbPhone, TbCode } from "react-icons/tb";
 import { BsRobot, BsMortarboard, BsBuilding } from "react-icons/bs";
 import { MdHub } from "react-icons/md";
-import { SiFastapi, SiGooglecloud } from "react-icons/si";
+import { SiFastapi, SiGooglecloud, SiSalesforce } from "react-icons/si";
 import "./ResumeNew.css";
 
 
@@ -27,7 +27,8 @@ const EXPERIENCE = [
     color: "#38bdf8",
     highlights: [
       "Architected 6 production-grade agentic AI systems using Google ADK",
-      "Built RAN Optimizer for major South Africa telecom — 3-agent multi-agent system with live KPI data",
+      "Delivered RAN Agentic AI POC using Fast-API, React, Pinecone, Light-LLM, and Google ADK to optimize telecom networks; deployed on NVIDIA Build Portal, outperforming competing Bubble-RAN benchmarks.",
+      "Led GE Small World Agentic AI solution (team of 3), developing 9 AI agents with microservice architecture + Fast-API + Pinecone for project automation; improved GE team productivity by 60%. ",
       "Developed SpatialPAL (RAG + LangFuse eval) for GE SmallWorld users",
       "Created Snowflow — JIRA & ServiceNow automation via MCP integrations",
       "Built multilingual Voice AI pipeline: WhisperX + Pyannote + ElevenLabs",
@@ -41,10 +42,13 @@ const EXPERIENCE = [
     icon: BsBuilding,
     color: "#818cf8",
     highlights: [
-      "End-to-end Salesforce ecosystem design and implementation",
-      "Apex, Lightning Web Components, and Agentforce architecture",
-      "Delivered integrations accelerating client performance by 50%+",
-      "Developed clean, OOP-driven code praised by client architects",
+      "Engineered a Bulk Feasibility Portal enabling users to perform 1,000+ feasibility checks simultaneously; used LWCs, Queueable classes, and controller classes to streamline technical & commercial feasibility via GE APIs,    saving 80% of user time", 
+      "Developed a time-critical Change Request to reduce GE Small World API calls using client-side caching and optimized logic; cut redundant network calls by 35%, improving application responsiveness.",
+      "Built Azure–Salesforce integration by creating a custom object, Remote Site Setting, and Apex class to fetch user details dynamically from Azure lookup; automated account data sync, improving accuracy by 40%. ",
+      "Led product version migration for 10+ traditional salesforce services to the latest Cloud-Sense services system, creating Apex classes, custom metadata/settings, and data mapping logic, ensured zero downtime and smooth UI upgrade across customer base.",
+      "Built a Commercial Feasibility App that simplified on-net/off-net decision-making by integrating GE Small World API data into an interactive LWC dashboard; enhanced visibility and reduced feasibility errors by 50%. ",
+      "Implemented Salesforce Einstein Forecasting and Lead Scoring to enhance sales predictability and opportunity prioritization; designed Agentforce automations and enabled secure third-party agent-to-agent communication using App Manager and OAuth 2.0, streamlining cross-platform workflows and improving sales efficiency. ",          
+      "Handled multiple P1 issues and urgent change requests; collaborated directly with clients and on-site managers for rapid debugging and zero-failure deployments, earning managerial appreciations." 
     ],
   },
 ];
@@ -61,7 +65,7 @@ const EDUCATION = [
 
 const CERTS = [
   { label: "Google ADK Badges",     icon: SiGooglecloud,           color: "#38bdf8", status: "earned" },
-  { label: "Microsoft Azure AI Dev",   icon: GiArtificialIntelligence, color: "#818cf8", status: "in-progress" },
+  { label: "Microsoft Certified Azure AI Developer",   icon: GiArtificialIntelligence, color: "#818cf8", status: "in-progress" },
 ];
 
 const SKILLS_FEATURED = [
@@ -73,6 +77,7 @@ const SKILLS_FEATURED = [
   { icon: TbPhone,   label: "Voice AI" },
   { icon: TbNetwork, label: "Multi-Agent" },
   { icon: TbCode,    label: "FastAPI" },
+  { icon: SiSalesforce ,    label: "Salesforce" },
 ];
 
 // ── Scroll reveal hook ─────────────────────────────────
@@ -285,7 +290,7 @@ function ResumeNew() {
                     <div className="rv-callout-inner">
                       <span className="rv-callout-number">6</span>
                       <div>
-                        <strong>AI Projects Shipped</strong>
+                        <strong>AI Projects Developed</strong>
                         <p>From telecom RAN optimization to AI therapist apps — all production-grade.</p>
                       </div>
                     </div>

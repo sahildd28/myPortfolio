@@ -3,13 +3,23 @@
    ═══════════════════════════════════════════════════════ */
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;600&display=swap");
 
+/* ── Global overflow guard ───────────────────────────── */
+body, html {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 /* ── Fix tsparticles blocking clicks globally ───────── */
 #tsparticles {
   pointer-events: none !important;
 }
 
 /* ── Wrapper + section ──────────────────────────────── */
-.home-wrapper { position: relative; }
+.home-wrapper {
+  position: relative;
+  overflow-x: hidden;
+  max-width: 100%;
+}
 
 .home-section {
   position: relative;
@@ -20,6 +30,7 @@
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
+  max-width: 100%;
 }
 
 /* Override global padding — buttons sit at z-index 10 */
@@ -266,6 +277,7 @@
   opacity: 0;
   animation: fadeIn 1s 0.4s ease forwards;
   pointer-events: none !important;
+  overflow: hidden;
 }
 
 .home-logo-wrap {
@@ -273,9 +285,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 420px;
-  height: 420px;
+  width: min(420px, 100%);
+  height: min(420px, 45vw);
   pointer-events: none !important;
+  overflow: visible;
 }
 
 /* Orbit rings */
@@ -442,11 +455,15 @@
 }
 
 /* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 991px) {
+  .home-logo-wrap { width: 320px; height: 320px; }
+  .home-orbit--1  { width: 220px; height: 220px; }
+  .home-orbit--2  { width: 270px; height: 270px; }
+  .home-orbit--3  { width: 320px; height: 320px; }
+}
+
 @media (max-width: 767px) {
-  .home-logo-wrap { width: 280px; height: 280px; }
-  .home-orbit--1  { width: 200px; height: 200px; }
-  .home-orbit--2  { width: 248px; height: 248px; }
-  .home-orbit--3  { width: 280px; height: 280px; }
+  .home-logo-col  { display: none; }
   .home-cta-row   { flex-direction: column; }
   .home-cta-btn   { justify-content: center; }
   .home-stats-float { gap: 8px; }
@@ -455,7 +472,11 @@
 
 
 /* ── Wrapper + section ──────────────────────────────── */
-.home-wrapper { position: relative; }
+.home-wrapper {
+  position: relative;
+  overflow-x: hidden;
+  max-width: 100%;
+}
 
 .home-section {
   position: relative;
@@ -466,6 +487,7 @@
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
+  max-width: 100%;
 }
 
 /* Override global padding */
@@ -589,7 +611,7 @@
 
 /* ── Typewriter ─────────────────────────────────────── */
 .home-type-wrap {
-  padding: 16px 0 8px;
+  padding: 16px 40px 8px;
   opacity: 0;
   animation: fadeUp 0.55s 0.5s cubic-bezier(0.22,1,0.36,1) forwards;
 }
@@ -876,11 +898,15 @@
 }
 
 /* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 991px) {
+  .home-logo-wrap { width: 320px; height: 320px; }
+  .home-orbit--1  { width: 220px; height: 220px; }
+  .home-orbit--2  { width: 270px; height: 270px; }
+  .home-orbit--3  { width: 320px; height: 320px; }
+}
+
 @media (max-width: 767px) {
-  .home-logo-wrap { width: 280px; height: 280px; }
-  .home-orbit--1  { width: 200px; height: 200px; }
-  .home-orbit--2  { width: 248px; height: 248px; }
-  .home-orbit--3  { width: 280px; height: 280px; }
+  .home-logo-col  { display: none; }
   .home-cta-row   { flex-direction: column; }
   .home-cta-btn   { justify-content: center; }
   .home-stats-float { gap: 8px; }

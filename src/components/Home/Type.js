@@ -10,8 +10,7 @@ function Type() {
           "Microsoft Certified AI Developer",
           "Agentic AI Developer",
           "Salesforce Developer",
-          "Full Stack Developer"
-          
+          "Full Stack Developer",          
         ],
         autoStart: true,
         loop: true,
