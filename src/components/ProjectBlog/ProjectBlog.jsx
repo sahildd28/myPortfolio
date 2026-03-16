@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Container } from "react-bootstrap";
-import { BsArrowLeft, BsGithub } from "react-icons/bs";
-import { SiGooglecloud, SiFastapi, SiPostgresql } from "react-icons/si";
+import { BsArrowLeft, BsGithub, BsRobot } from "react-icons/bs";
+import { SiGooglecloud, SiFastapi, SiPostgresql, SiSupabase, SiNetlify, SiWhatsapp } from "react-icons/si";
 import { GiArtificialIntelligence } from "react-icons/gi";
-import { TbBrain, TbNetwork, TbPhone, TbChartBar } from "react-icons/tb";
-import { MdHub } from "react-icons/md";
-import { BsRobot } from "react-icons/bs";
+import { TbBrain, TbNetwork, TbPhone, TbChartBar, TbWorldWww, TbDeviceMobile, TbQrcode, TbTool } from "react-icons/tb";
+import { MdHub, MdPayment } from "react-icons/md";
+import { CgWebsite } from "react-icons/cg";
 import "./ProjectBlog.css";
 
 // ─── Blog Data ────────────────────────────────────────────────────────────────
@@ -289,6 +289,138 @@ const BLOG_DATA = {
     ],
     ghLink: null,
   },
+
+  "getyourkarigar": {
+    id: "getyourkarigar",
+    title: "GetYourKarigar",
+    subtitle: "Furniture Repair & Carpentry Marketplace",
+    client: "Personal Venture — Live on Netlify",
+    duration: "Shipped & Live",
+    role: "Full Stack Developer & Founder",
+    tags: ["React", "Node.js", "NeonDB", "WhatsApp API", "Google OAuth"],
+    demoLink: "https://getyourkarigar.netlify.app",
+    overview:
+      "A full-stack marketplace solving a real family problem — connecting homeowners with trusted carpenters for furniture repair, carpentry, and interior work. My father has been a carpenter for 30 years. I built the platform he never had. Currently live with WhatsApp lead delivery, Google Sign-In, inquiry management, and a mobile app for carpenters.",
+    sections: [
+      {
+        type: "challenge",
+        heading: "The Problem Worth Solving",
+        body: "Finding a reliable carpenter for small furniture repairs is surprisingly hard. Platforms like UrbanClap are expensive and impersonal. My father runs a 30-year carpentry business that still relies on word of mouth. I built GetYourKarigar to give skilled carpenters a digital presence and give homeowners a fast, trusted way to find them.",
+      },
+      {
+        type: "architecture",
+        heading: "How It Works",
+        body: "Users browse service configurations on the web app, select their requirement, and raise an inquiry. Each new inquiry instantly triggers a WhatsApp notification to us via the WhatsApp Business API using a pre-built template. Users log in with Google OAuth — their Google user ID, name, and email are stored in the database. A user can only have one active inquiry at a time, keeping the workflow clean.",
+        chips: [
+          { icon: SiWhatsapp, label: "WhatsApp Lead Delivery" },
+          { icon: GiArtificialIntelligence, label: "Google OAuth Sign-In" },
+          { icon: SiPostgresql, label: "NeonDB (PostgreSQL)" },
+          { icon: SiFastapi, label: "Node.js Backend" },
+          { icon: SiNetlify, label: "Netlify Frontend" },
+          { icon: TbDeviceMobile, label: "Carpenter Mobile App" },
+        ],
+      },
+      {
+        type: "feature",
+        heading: "Carpenter Mobile App",
+        body: "I built a companion mobile app for carpenters to manage live leads. The workflow: carpenter visits the site → marks the lead as 'currently visiting' → uploads a quotation with a diagram, labour breakdown, and materials list. We review, negotiate, and either approve or assign to another carpenter. If unresolved in 90 days, the lead auto-closes.",
+      },
+      {
+        type: "feature",
+        heading: "Services & Projects Showcase",
+        body: "The platform lists all services we offer — furniture repair, interiors, custom carpentry — as well as an enterprise solutions section. A Projects tab shows completed work in a block format with timelines and customer requirements, building trust before the first inquiry.",
+      },
+      {
+        type: "impact",
+        heading: "Status & Traction",
+        body: "Frontend live on Netlify, backend on Render, database on NeonDB. The platform is fully functional and actively receiving inquiries. Still adding project images and videos to complete the showcase section.",
+        stats: [
+          { value: "Live", label: "Deployed & Active" },
+          { value: "30yr", label: "Family Business" },
+          { value: "WA", label: "Instant Lead Alerts" },
+          { value: "90d", label: "Lead Lifecycle" },
+        ],
+      },
+      {
+        type: "stack",
+        heading: "Tech Stack",
+        chips: [
+          { icon: TbWorldWww, label: "React Frontend" },
+          { icon: SiFastapi, label: "Node.js Backend" },
+          { icon: SiPostgresql, label: "NeonDB" },
+          { icon: SiNetlify, label: "Netlify + Render" },
+          { icon: SiWhatsapp, label: "WhatsApp API" },
+          { icon: TbDeviceMobile, label: "Mobile App" },
+        ],
+      },
+    ],
+    ghLink: null,
+  },
+
+  "pos-system": {
+    id: "pos-system",
+    title: "Restaurant POS",
+    subtitle: "Digital Menu & Order Management System",
+    client: "Personal Project — Pitched to Restaurants",
+    duration: "Prototype",
+    role: "Frontend Developer & Product Designer",
+    tags: ["React", "Supabase", "QR Menus", "Real-time", "POS"],
+    demoLink: "",
+    overview:
+      "A fully frontend-driven Point of Sale system for restaurants — built with Supabase for real-time data, zero backend infrastructure. Features multi-screen kitchen and waiter views, QR-code digital menus per table, and dynamic table-based order management. Pitched to multiple restaurants as an affordable alternative to expensive POS incumbents.",
+    sections: [
+      {
+        type: "challenge",
+        heading: "The Problem",
+        body: "Restaurant POS systems are expensive, complex to deploy, and overkill for small establishments. I wanted to prove you could build a competitive system with just a frontend and Supabase — no backend, no heavy infra, no license fees.",
+      },
+      {
+        type: "architecture",
+        heading: "Multi-Screen Architecture",
+        body: "The system runs on multiple screens simultaneously — a kitchen display showing incoming orders, a waiter tablet for adding and modifying orders, and a manager view for table overview. All screens sync in real-time via Supabase's live subscriptions. Every table gets a unique QR code that opens a digital menu — customers can browse the full menu before ordering.",
+        chips: [
+          { icon: SiSupabase, label: "Supabase Real-time" },
+          { icon: TbQrcode, label: "QR Digital Menus" },
+          { icon: TbDeviceMobile, label: "Kitchen Display" },
+          { icon: TbDeviceMobile, label: "Waiter Tablet View" },
+          { icon: MdPayment, label: "Order Management" },
+          { icon: TbTool, label: "Menu Builder" },
+        ],
+      },
+      {
+        type: "feature",
+        heading: "QR-Based Digital Menu",
+        body: "Each physical table has a unique QR code. Scanning it opens a live digital menu for that table — customers can see items, descriptions, and prices. Tables are numbered 1 to N based on restaurant configuration. Orders placed at the table flow directly into the kitchen display.",
+      },
+      {
+        type: "feature",
+        heading: "Menu & Dish Management",
+        body: "Restaurant managers can add, remove, and update dishes from a simple admin interface. Changes reflect immediately across all screens and QR menus — no app updates, no cache clearing. Built for non-technical restaurant owners to manage themselves.",
+      },
+      {
+        type: "impact",
+        heading: "Outcome",
+        body: "Pitched to multiple restaurants but couldn't displace established POS systems already in use. However, the project proved a full POS workflow is achievable with pure frontend + Supabase — a strong technical POC with real business validation attempts.",
+        stats: [
+          { value: "0", label: "Backend Required" },
+          { value: "Live", label: "Real-time Sync" },
+          { value: "QR", label: "Per-Table Menus" },
+          { value: "Multi", label: "Screen Views" },
+        ],
+      },
+      {
+        type: "stack",
+        heading: "Tech Stack",
+        chips: [
+          { icon: TbWorldWww, label: "React Frontend" },
+          { icon: SiSupabase, label: "Supabase" },
+          { icon: TbQrcode, label: "QR Generation" },
+          { icon: TbDeviceMobile, label: "Multi-Screen UI" },
+        ],
+      },
+    ],
+    ghLink: null,
+  },
 };
 
 // ─── Scroll Reveal Hook ───────────────────────────────────────────────────────
@@ -395,10 +527,12 @@ function ProjectBlog({ blogId: propBlogId }) {
     opacity: Math.max(0, 1 - scrolled / 420),
   };
 
+  const isPersonal = blog.id === "getyourkarigar" || blog.id === "pos-system";
+
   return (
-    <div className="blog-page">
+    <div className={`blog-page ${isPersonal ? "blog-page--personal" : ""}`}>
       {/* ── Hero ── */}
-      <div className="blog-hero" ref={heroRef}>
+      <div className={`blog-hero ${isPersonal ? "blog-hero--personal" : ""}`} ref={heroRef}>
         <div className="blog-hero-grid" />
         <div className="blog-hero-glow" />
         <div className="blog-hero-content" style={parallaxStyle}>
@@ -444,6 +578,11 @@ function ProjectBlog({ blogId: propBlogId }) {
           {blog.ghLink && (
             <a href={blog.ghLink} target="_blank" rel="noreferrer" className="blog-cta-btn blog-cta-btn--primary">
               <BsGithub /> View on GitHub
+            </a>
+          )}
+          {blog.demoLink && (
+            <a href={blog.demoLink} target="_blank" rel="noreferrer" className="blog-cta-btn blog-cta-btn--demo">
+              <CgWebsite /> View Live Site
             </a>
           )}
           <button className="blog-cta-btn blog-cta-btn--ghost" onClick={() => navigate(-1)}>

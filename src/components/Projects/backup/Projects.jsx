@@ -4,11 +4,14 @@ import ProjectCard from "./ProjectCards";
 import "./Projects.css";
 
 // ─── Import your project images here ──────────────────────────────────────────
+// Example structure — replace with actual imports:
 // import ran1 from "../../Assets/Projects/ran-optimizer/ran1.png";
-// import karigar1 from "../../Assets/Projects/karigar/karigar1.png";
+// import ran2 from "../../Assets/Projects/ran-optimizer/ran2.png";
+// import pal1 from "../../Assets/Projects/spatialpal/pal1.png";
+// ...etc
 
-// ─── AI / Enterprise Projects ─────────────────────────────────────────────────
-const AI_PROJECTS = [
+// For now we use placeholder arrays — swap in your real imports
+const PROJECT_DATA = [
   {
     id: "ran-optimizer",
     title: "RAN Optimizer",
@@ -77,34 +80,6 @@ const AI_PROJECTS = [
   },
 ];
 
-// ─── Personal & Entrepreneurial Projects ──────────────────────────────────────
-const PERSONAL_PROJECTS = [
-  {
-    id: "getyourkarigar",
-    title: "GetYourKarigar",
-    subtitle: "Furniture Repair & Carpentry Marketplace",
-    description:
-      "A full-stack marketplace connecting homeowners with trusted carpenters for furniture repair, carpentry, and interiors. Built to solve a real family problem — my father's 30-year carpentry business. Features Google Sign-In, WhatsApp lead delivery, active inquiry management, quotation workflows with materials & diagrams, and a mobile app for carpenters to manage live leads end-to-end.",
-    tags: ["Full Stack", "React", "NeonDB"],
-    images: [],
-    isBlog: true,
-    blogId: "getyourkarigar",
-    demoLink: "https://getyourkarigar.netlify.app",
-  },
-  {
-    id: "pos-system",
-    title: "Restaurant POS System",
-    subtitle: "Digital Menu & Order Management",
-    description:
-      "A fully frontend-driven Point of Sale system for restaurants built with Supabase. Features multi-screen kitchen and waiter views, QR-code digital menus per table, dynamic table management, and real-time order tracking. Pitched to multiple restaurants — built to compete with established POS systems with zero backend infrastructure.",
-    tags: ["Supabase", "React", "QR Menu"],
-    images: [],
-    isBlog: true,
-    blogId: "pos-system",
-    demoLink: "",
-  },
-];
-
 // ─── Animated heading word ────────────────────────────────────────────────────
 function AnimatedHeading() {
   const [active, setActive] = useState(0);
@@ -164,26 +139,11 @@ function StatsBar() {
   );
 }
 
-// ─── Category Section Label ───────────────────────────────────────────────────
-function CategoryLabel({ emoji, title, subtitle, variant = "ai" }) {
-  return (
-    <div className={`proj-category-label proj-category-label--${variant}`}>
-      <div className="proj-category-label-left">
-        <span className="proj-category-emoji">{emoji}</span>
-        <div>
-          <h2 className="proj-category-title">{title}</h2>
-          <p className="proj-category-subtitle">{subtitle}</p>
-        </div>
-      </div>
-      <div className="proj-category-line" />
-    </div>
-  );
-}
-
 // ─── Main Component ───────────────────────────────────────────────────────────
 function Projects() {
   return (
     <div className="proj-page">
+      {/* Background grid */}
       <div className="proj-bg-grid" />
       <div className="proj-bg-glow proj-bg-glow--left" />
       <div className="proj-bg-glow proj-bg-glow--right" />
@@ -192,16 +152,14 @@ function Projects() {
         <AnimatedHeading />
         <StatsBar />
 
-        {/* ── AI & Enterprise Projects ── */}
-        <CategoryLabel
-          emoji="🤖"
-          title="AI & Agentic Systems"
-          subtitle="Production-grade multi-agent platforms built for enterprise clients"
-          variant="ai"
-        />
         <Row className="proj-grid" style={{ justifyContent: "center" }}>
-          {AI_PROJECTS.map((project, i) => (
-            <Col key={project.id} md={4} className="proj-col" style={{ animationDelay: `${i * 0.08}s` }}>
+          {PROJECT_DATA.map((project, i) => (
+            <Col
+              key={project.id}
+              md={4}
+              className="proj-col"
+              style={{ animationDelay: `${i * 0.08}s` }}
+            >
               <ProjectCard
                 title={project.title}
                 description={project.description}
@@ -215,32 +173,6 @@ function Projects() {
             </Col>
           ))}
         </Row>
-
-        {/* ── Personal & Entrepreneurial Projects ── */}
-        <CategoryLabel
-          emoji="🚀"
-          title="Personal & Entrepreneurial"
-          subtitle="Self-initiated products built to solve real problems — shipped and live"
-          variant="personal"
-        />
-        <Row className="proj-grid" style={{ justifyContent: "center" }}>
-          {PERSONAL_PROJECTS.map((project, i) => (
-            <Col key={project.id} md={4} className="proj-col" style={{ animationDelay: `${i * 0.08}s` }}>
-              <ProjectCard
-                title={project.title}
-                description={project.description}
-                images={project.images}
-                tags={project.tags}
-                isBlog={project.isBlog}
-                blogId={project.blogId}
-                ghLink={project.ghLink}
-                demoLink={project.demoLink}
-                variant="personal"
-              />
-            </Col>
-          ))}
-        </Row>
-
       </Container>
     </div>
   );
