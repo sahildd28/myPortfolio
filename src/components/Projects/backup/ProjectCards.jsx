@@ -6,8 +6,7 @@ import "./ProjectCards.css";
 
 function ProjectCards(props) {
   const navigate = useNavigate();
-  const { title, description, imgPath, images, tags, isBlog, blogId, ghLink, demoLink, variant } = props;
-  const isPersonal = variant === 'personal';
+  const { title, description, imgPath, images, tags, isBlog, blogId, ghLink, demoLink } = props;
 
   // Image carousel — uses `images` array if provided, else falls back to single `imgPath`
   const imageList = images && images.length > 0 ? images : imgPath ? [imgPath] : [];
@@ -51,7 +50,7 @@ function ProjectCards(props) {
   };
 
   return (
-    <div ref={cardRef} className={`pc-card ${visible ? "pc-card--visible" : ""} ${isPersonal ? "pc-card--personal" : ""}`}>
+    <div ref={cardRef} className={`pc-card ${visible ? "pc-card--visible" : ""}`}>
       {/* Image Area */}
       <div className="pc-img-wrap">
         {imageList.length > 0 ? (
@@ -97,13 +96,6 @@ function ProjectCards(props) {
             {currentImg + 1}/{imageList.length}
           </div>
         )}
-
-        {/* Live badge for personal projects */}
-        {isPersonal && demoLink && (
-          <div className="pc-live-badge">
-            <span className="pc-live-dot" /> Live
-          </div>
-        )}
       </div>
 
       {/* Body */}
@@ -116,12 +108,6 @@ function ProjectCards(props) {
             <button className="pc-btn pc-btn--primary" onClick={handleBlogClick}>
               Read Blog <BsArrowRight className="pc-btn-icon" />
             </button>
-          )}
-          {/* Show Demo alongside Blog for personal projects */}
-          {isBlog && demoLink && (
-            <a className="pc-btn pc-btn--demo" href={demoLink} target="_blank" rel="noreferrer">
-              <CgWebsite /> &nbsp;Live Site
-            </a>
           )}
           {!isBlog && ghLink && (
             <a className="pc-btn pc-btn--primary" href={ghLink} target="_blank" rel="noreferrer">
