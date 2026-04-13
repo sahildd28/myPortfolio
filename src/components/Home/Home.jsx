@@ -138,7 +138,7 @@ function Home() {
               <div className="home-stats-float">
                 <StatPill value="6+" label="AI Projects"        delay={1000} />
                 <StatPill value="3+" label="Enterprise Clients" delay={1200} />
-                <StatPill value="2.5yr" label="Total Experience"          delay={1400} />
+                <StatPill value="2.6yr" label="Total Experience"          delay={1400} />
               </div>
             </Col>
           </Row>

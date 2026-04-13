@@ -64,7 +64,6 @@ const BLOG_DATA = {
           { icon: SiFastapi, label: "FastAPI" },
           { icon: SiPostgresql, label: "PostgreSQL" },
           { icon: TbBrain, label: "RAG Pipeline" },
-          { icon: SiGooglecloud, label: "Google Cloud" },
           { icon: TbNetwork, label: "Live UI Services" },
         ],
       },
@@ -95,7 +94,7 @@ const BLOG_DATA = {
         chips: [
           { icon: TbBrain, label: "RAG Retrieval" },
           { icon: GiArtificialIntelligence, label: "Google ADK Agent" },
-          { icon: TbChartBar, label: "LangFuse Evals" },
+          { icon: TbChartBar, label: "LangFuse Evaluation" },
           { icon: SiPostgresql, label: "PostgreSQL" },
           { icon: SiFastapi, label: "FastAPI" },
           { icon: SiGooglecloud, label: "Pinecone Index" },

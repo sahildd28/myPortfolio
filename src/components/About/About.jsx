@@ -78,7 +78,7 @@ function IdentityPanel() {
       <div className="about-identity-stats">
         {[
           { val: 1.5, suffix: "yr+", label: "AI Dev" },
-          { val: 2, suffix: ".5yr", label: "Industry" },
+          { val: 2, suffix: ".6yr", label: "Industry" },
           { val: 6, suffix: "", label: "AI Projects" },
         ].map((s) => (
           <div key={s.label} className="about-identity-stat">
