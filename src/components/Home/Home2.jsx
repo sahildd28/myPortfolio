@@ -5,11 +5,11 @@ import Tilt from "react-parallax-tilt";
 import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { GiArtificialIntelligence } from "react-icons/gi";
-import { TbBrain, TbNetwork } from "react-icons/tb";
 import { BsRobot } from "react-icons/bs";
 import { MdHub } from "react-icons/md";
 import "./Home2.css";
-import { SiSalesforce } from "react-icons/si";
+import { FaJava } from "react-icons/fa";
+import { SiSpringboot  } from "react-icons/si";
 
 function useReveal(threshold = 0.12) {
   const ref = useRef(null);
@@ -29,11 +29,11 @@ function useReveal(threshold = 0.12) {
 // ── Floating capability pills around avatar ────────────
 const CAPS = [
   { icon: GiArtificialIntelligence, label: "Google ADK",  pos: "cap--tl" },
-  { icon: TbBrain,                  label: "RAG",          pos: "cap--tr" },
+  { icon: FaJava,                  label: "Java",          pos: "cap--tr" },
   { icon: MdHub,                    label: "MCP",          pos: "cap--bl" },
-  { icon: TbNetwork,                label: "A2A",          pos: "cap--br" },
+  { icon: SiSpringboot,                label: "Springboot",          pos: "cap--br" },
   { icon: BsRobot,                  label: "Agentic AI",   pos: "cap--top" },
-  { icon: SiSalesforce,             label: "Salesforce",   pos: "cap--bottom" },
+  { icon: FaJava,             label: "RAG",   pos: "cap--bottom" },
 ];
 
 // ── Core principle cards ───────────────────────────────
@@ -72,34 +72,31 @@ function Home2() {
                 intelligent software.
               </h1>
               <p className="home-about-body">
-                  I&apos;m an <strong className="h2-strong">AI Engineer</strong> specializing
-                  in agentic systems — building production-grade, multi-agent platforms that
-                  automate complex workflows and deliver real business impact.
-                  <br /><br />
-                  My journey started in <strong className="h2-strong">Salesforce</strong> —
-                  where I shipped enterprise-grade solutions like a Bulk Feasibility Portal
-                  handling 1,000+ simultaneous checks, Azure–Salesforce integrations, and
-                  Cloud-Sense migrations with zero downtime. I then moved up the stack into{" "}
-                  <strong className="h2-strong">Einstein AI</strong> — implementing Forecasting
-                  and Lead Scoring — and into{" "}
-                  <strong className="h2-strong">Agentforce</strong>, designing agent-to-agent
-                  communication flows with OAuth 2.0. Each step was a deliberate climb toward
-                  one thing: intelligent, autonomous systems.
-                  <br /><br />
-                  Today I architect those systems full-time using{" "}
-                  <strong className="h2-strong">Google ADK</strong> — building multi-agent
-                  pipelines with RAG reasoning, MCP integrations, human-in-the-loop flows,
-                  and voice AI, from prototype to client-ready delivery at scale.
-                  <br /><br />
-                  My stack spans{" "}
-                  <strong className="h2-strong">
-                    FastAPI, React, Python, PostgreSQL, Pinecone, LangFuse
-                  </strong>{" "}
-                  and <strong className="h2-strong">NVIDIA infrastructure</strong> — backed
-                  by the clean OOP discipline and enterprise instincts I built over 2.5 years
-                  of Salesforce development. The foundation is Salesforce. The destination
-                  is agentic AI.
-                </p>
+                I&apos;m a <strong className="h2-strong">Java Full Stack Developer & AI Engineer</strong> 
+                with 2.7 years of experience building enterprise-grade systems and 1.5 years architecting 
+                agentic AI solutions. I specialize in <strong className="h2-strong">Spring Boot microservices</strong>, 
+                <strong className="h2-strong">React portals</strong>, and <strong className="h2-strong">cloud-native deployments</strong> 
+                while simultaneously designing <strong className="h2-strong">multi-agent AI pipelines</strong> that automate 
+                workflows and deliver measurable business impact.
+                <br /><br />
+                At <strong className="h2-strong">TCS</strong>, I&apos;ve engineered secure, scalable applications with 
+                Spring Boot 3.x, React.js, and PostgreSQL, containerized with Docker and deployed on 
+                Azure Kubernetes Service via GitHub Actions CI/CD. My work includes building 5+ microservices 
+                with OAuth2/JWT authentication, 4 React-powered portals with reusable components, and optimizing 
+                CI pipelines to cut build times by 66%.
+                <br /><br />
+                In parallel, I&apos;ve co-built 6 production-ready AI projects — from 
+                <strong className="h2-strong">RAG platforms</strong> and <strong className="h2-strong">voice AI pipelines</strong> 
+                to <strong className="h2-strong">multi-agent systems</strong> using Google ADK, Pinecone, LangFuse, and NVIDIA 
+                infrastructure. These solutions integrate human-in-the-loop flows, contextual MCP servers, and 
+                real-time dashboards, driving automation and productivity gains across telecom, healthcare, and automation domains.
+                <br /><br />
+                My stack spans <strong className="h2-strong">Spring Boot, FastAPI, React, Python, PostgreSQL, Docker, AKS</strong>, 
+                and <strong className="h2-strong">NVIDIA AI infrastructure</strong> — backed by strong foundations in 
+                <strong className="h2-strong">DSA</strong>, <strong className="h2-strong">System Design</strong>, and 
+                <strong className="h2-strong">cloud-native architecture</strong>. I thrive at the intersection of 
+                enterprise engineering and agentic AI.
+              </p>
             </div>
           </Col>
 

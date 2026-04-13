@@ -9,7 +9,6 @@ import {
   SiNvidia,
   SiMicrosoftazure,
   SiGithub,
-  SiGooglecloud,
   SiJira,
 } from "react-icons/si";
 import { TbChartBar, TbApi, TbDatabase } from "react-icons/tb";
@@ -20,7 +19,6 @@ const TOOL_GROUPS = [
   {
     label: "AI Dev Tools",
     items: [
-      { icon: SiGooglecloud, label: "Google Cloud" },
       { icon: BsRobot,       label: "Google ADK" },
       { icon: TbChartBar,    label: "LangFuse" },
       { icon: TbDatabase,    label: "Pinecone Console" },
@@ -30,31 +28,36 @@ const TOOL_GROUPS = [
     label: "APIs & Testing",
     items: [
       { icon: SiPostman, label: "Postman" },
-      { icon: TbApi,     label: "3SIP" },
+      { icon: TbApi,     label: "Swagger/OpenAPI" },
+      { icon: TbApi,     label: "JUnit 5" },
+      { icon: TbApi,     label: "Mockito" },
+      { icon: TbApi,     label: "Testcontainers" },
     ],
   },
   {
     label: "Cloud & Infra",
     items: [
-      { icon: SiNvidia,        label: "NVIDIA CUDA" },
-      { icon: SiMicrosoftazure, label: "Azure Dev Tools" },
-      { icon: SiVercel,        label: "Vercel" },
+      { icon: SiNvidia,         label: "NVIDIA Infrastructure" },
+      { icon: SiMicrosoftazure, label: "Azure Kubernetes Service (AKS)" },
+      { icon: SiMicrosoftazure, label: "Azure APIM & Entra ID" },
+      { icon: SiVercel,         label: "Vercel" },
+      { icon: MdManageSearch,   label: "Helm & Nginx" },
     ],
   },
   {
     label: "Dev Environment",
     items: [
       { icon: SiVisualstudiocode, label: "VS Code" },
-      { icon: SiGithub,          label: "GitHub" },
-      { icon: SiWindows,         label: "Windows" },
+      { icon: SiGithub,           label: "GitHub Actions CI/CD" },
+      { icon: SiWindows,          label: "Windows" },
     ],
   },
   {
     label: "Integrations",
     items: [
-      { icon: SiJira,       label: "Jira" },
-      { icon: MdManageSearch, label: "ServiceNow" },
-      { icon: SiAndroidstudio, label: "Android Studio" },
+      { icon: SiJira,             label: "Jira" },
+      { icon: MdManageSearch,     label: "ServiceNow MCP" },
+      { icon: SiAndroidstudio,    label: "Android Studio" },
     ],
   },
 ];

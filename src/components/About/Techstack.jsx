@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import { DiJavascript1, DiReact, DiPython, DiJava } from "react-icons/di";
 import {
-  SiSalesforce,
   SiFastapi,
   SiDocker,
   SiTailwindcss,
@@ -14,13 +13,18 @@ import {
   SiNvidia,
   SiExpo,
   SiVite,
+  SiGithub,
+  SiVercel,
+  SiPostman
 } from "react-icons/si";
 import { GiArtificialIntelligence } from "react-icons/gi";
-import { TbBrain, TbWebhook, TbPhone, TbNetwork } from "react-icons/tb";
+import { TbBrain, TbWebhook, TbPhone, TbNetwork ,TbApi} from "react-icons/tb";
 import { MdHub, MdSettingsInputComponent } from "react-icons/md";
 import { BsRobot } from "react-icons/bs";
 import { AiOutlineDatabase } from "react-icons/ai";
 import "./Techstack.css";
+
+
 
 const TECH_GROUPS = [
   {
@@ -38,8 +42,8 @@ const TECH_GROUPS = [
     label: "AI & Models",
     color: "#818cf8",
     items: [
-      { icon: SiOpenai,        label: "OpenAI" },
-      { icon: SiNvidia,        label: "NVIDIA" },
+      { icon: SiOpenai,        label: "OpenAI SDK" },
+      { icon: SiNvidia,        label: "NVIDIA Infrastructure" },
       { icon: SiMicrosoftazure, label: "Azure AI" },
       { icon: TbWebhook,       label: "LangFuse" },
     ],
@@ -48,9 +52,10 @@ const TECH_GROUPS = [
     label: "Backend & Data",
     color: "#34d399",
     items: [
+      { icon: SiSpringboot,       label: "Spring Boot 3.x" },
+      { icon: DiJava,             label: "Java" },
       { icon: SiFastapi,          label: "FastAPI" },
       { icon: DiPython,           label: "Python" },
-      { icon: SiSpringboot,       label: "Spring Boot" },
       { icon: SiPostgresql,       label: "PostgreSQL" },
       { icon: AiOutlineDatabase,  label: "Pinecone" },
       { icon: AiOutlineDatabase,  label: "ChromaDB" },
@@ -61,18 +66,21 @@ const TECH_GROUPS = [
     color: "#fb923c",
     items: [
       { icon: TbPhone, label: "ElevenLabs" },
+      { icon: TbPhone, label: "WhisperX" },
+      { icon: TbPhone, label: "Pyannote" },
     ],
   },
   {
     label: "Frontend",
     color: "#a78bfa",
     items: [
-      { icon: DiReact,          label: "React" },
+      { icon: DiReact,          label: "React.js" },
       { icon: SiExpo,           label: "React Native Expo" },
       { icon: SiVite,           label: "Vite" },
       { icon: SiTailwindcss,    label: "Tailwind CSS" },
       { icon: DiJavascript1,    label: "JavaScript" },
       { icon: SiTypescript,     label: "TypeScript" },
+      { icon: DiReact,          label: "Next.js" },
     ],
   },
   {
@@ -80,9 +88,24 @@ const TECH_GROUPS = [
     color: "#64748b",
     items: [
       { icon: SiDocker,               label: "Docker" },
-      { icon: SiSalesforce,           label: "Salesforce" },
-      { icon: DiJava,                 label: "Java" },
-      { icon: MdSettingsInputComponent, label: "Agentforce" },
+      { icon: SiMicrosoftazure,       label: "Azure Kubernetes Service (AKS)" },
+      { icon: SiGithub,               label: "GitHub Actions CI/CD" },
+      { icon: MdSettingsInputComponent, label: "Azure APIM & Entra ID" },
+      { icon: MdSettingsInputComponent, label: "Helm & Nginx" },
+      { icon: SiVercel,               label: "Vercel" },
+    ],
+  },
+  {
+    label: "Testing & Tools",
+    color: "#facc15",
+    items: [
+      { icon: SiPostman, label: "Postman" },
+      { icon: TbApi,     label: "Swagger/OpenAPI" },
+      { icon: SiGithub,  label: "Git/GitHub" },
+      { icon: TbApi,     label: "JUnit 5" },
+      { icon: TbApi,     label: "Mockito" },
+      { icon: TbApi,     label: "Testcontainers" },
+      { icon: TbApi,     label: "Maven & Gradle" },
     ],
   },
 ];

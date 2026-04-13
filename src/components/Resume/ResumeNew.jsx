@@ -5,11 +5,15 @@ import pdf from "../../Assets/../Assets/Resume.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import { GiArtificialIntelligence } from "react-icons/gi";
-import { TbBrain, TbNetwork, TbPhone, TbCode } from "react-icons/tb";
+import { FaAws } from "react-icons/fa";
+import { FaJava } from "react-icons/fa";
+import { TbBrain, TbPhone, TbNetwork } from "react-icons/tb";
+import { SiFastapi, SiSpringboot, SiPostgresql, SiReact, SiDocker,SiMicrosoftazure,SiGooglecloud} from "react-icons/si";
+import { DiPython } from "react-icons/di";
 import { BsRobot, BsMortarboard, BsBuilding } from "react-icons/bs";
 import { MdHub } from "react-icons/md";
-import { SiFastapi, SiGooglecloud, SiSalesforce } from "react-icons/si";
 import "./ResumeNew.css";
+
 
 
 
@@ -36,19 +40,20 @@ const EXPERIENCE = [
   },
   {
     period: "2023 – 2024",
-    role: "Salesforce Developer",
+    role: "Java Full Stack Web Developer",
     company: "Tata Consultancy Services",
-    type: "salesforce",
+    type: "java",
     icon: BsBuilding,
     color: "#818cf8",
     highlights: [
-      "Engineered a Bulk Feasibility Portal enabling users to perform 1,000+ feasibility checks simultaneously; used LWCs, Queueable classes, and controller classes to streamline technical & commercial feasibility via GE APIs,    saving 80% of user time", 
-      "Developed a time-critical Change Request to reduce GE Small World API calls using client-side caching and optimized logic; cut redundant network calls by 35%, improving application responsiveness.",
-      "Built Azure–Salesforce integration by creating a custom object, Remote Site Setting, and Apex class to fetch user details dynamically from Azure lookup; automated account data sync, improving accuracy by 40%. ",
-      "Led product version migration for 10+ traditional salesforce services to the latest Cloud-Sense services system, creating Apex classes, custom metadata/settings, and data mapping logic, ensured zero downtime and smooth UI upgrade across customer base.",
-      "Built a Commercial Feasibility App that simplified on-net/off-net decision-making by integrating GE Small World API data into an interactive LWC dashboard; enhanced visibility and reduced feasibility errors by 50%. ",
-      "Implemented Salesforce Einstein Forecasting and Lead Scoring to enhance sales predictability and opportunity prioritization; designed Agentforce automations and enabled secure third-party agent-to-agent communication using App Manager and OAuth 2.0, streamlining cross-platform workflows and improving sales efficiency. ",          
-      "Handled multiple P1 issues and urgent change requests; collaborated directly with clients and on-site managers for rapid debugging and zero-failure deployments, earning managerial appreciations." 
+      "Designed and developed enterprise-grade applications using Spring Boot 3.x, React, and PostgreSQL, serving stakeholders across multiple business units in a B2B telecom environment.",
+      "Built and maintained 5 Spring Boot microservices with REST APIs, role-based access control, and secure JWT / OAuth 2.0 authentication flows using Spring Security.",
+      "Developed 4 React-powered portals with optimized API integration, reusable pagination components, and responsive UI for large-scale data rendering across business users.",
+      "Containerized services with Docker and deployed to Azure Kubernetes Service (AKS) via GitHub Actions CI/CD;restructured test execution reducing CI build times from 9 min to 3 min (66% improvement).",
+      "Implemented Spring Data JPA, JdbcTemplate, and Flyway for database migrations; improved file download performance from seconds to milliseconds using Java NIO transferTo().",
+      "Integrated Microsoft Graph API and Azure Entra ID for secure enterprise authentication and authorization across services.",
+      "Built MCP servers for contextual AI integrations; configured Azure APIM, Helm, and Nginx for API management and reverse   proxy across AKS clusters.",
+      "Wrote comprehensive test suites using JUnit 5, Mockito, and Testcontainers; maintained high coverage across microservices with Maven and Gradle build pipelines."
     ],
   },
 ];
@@ -66,18 +71,24 @@ const EDUCATION = [
 const CERTS = [
   { label: "Google ADK Badges",     icon: SiGooglecloud,           color: "#38bdf8", status: "earned" },
   { label: "Microsoft Certified Azure AI Developer",   icon: GiArtificialIntelligence, color: "#818cf8", status: "in-progress" },
+  { label: "AWS Solution Architect",   icon: FaAws, color: "#f1de2b", status: "in-progress" },
 ];
 
 const SKILLS_FEATURED = [
+   { icon: FaJava,                label: "Java" },
+  { icon: SiSpringboot,          label: "Spring Boot 3.x" },
+  { icon: DiPython,              label: "Python" },
+  { icon: SiFastapi,             label: "FastAPI" },
+  { icon: SiReact,               label: "React.js" },
+  { icon: SiPostgresql,          label: "PostgreSQL" },
+  { icon: SiDocker,              label: "Docker" },
+  { icon: SiMicrosoftazure,      label: "Azure Kubernetes Service (AKS)" },
   { icon: GiArtificialIntelligence, label: "Google ADK" },
-  { icon: BsRobot,   label: "Agentic AI" },
-  { icon: MdHub,     label: "MCP / A2A" },
-  { icon: TbBrain,   label: "RAG" },
-  { icon: SiFastapi, label: "FastAPI" },
-  { icon: TbPhone,   label: "Voice AI" },
-  { icon: TbNetwork, label: "Multi-Agent" },
-  { icon: TbCode,    label: "FastAPI" },
-  { icon: SiSalesforce ,    label: "Salesforce" },
+  { icon: BsRobot,               label: "Agentic AI" },
+  { icon: MdHub,                 label: "MCP / A2A" },
+  { icon: TbBrain,               label: "RAG" },
+  { icon: TbNetwork,             label: "Multi-Agent Systems" },
+  { icon: TbPhone,               label: "Voice AI" },
 ];
 
 // ── Scroll reveal hook ─────────────────────────────────
@@ -183,7 +194,7 @@ function ResumeNew() {
               <h1 className="rv-title">
                 Sahil <span className="rv-accent">Dhamnaskar</span>
               </h1>
-              <p className="rv-subtitle">AI Engineer · Salesforce Developer · Tata Consultancy Services · Maharashtra, India</p>
+              <p className="rv-subtitle">GEN AI Developer · Java Full Stack Developer · Tata Consultancy Services · Maharashtra, India</p>
             </div>
 
             {/* Tab switcher */}

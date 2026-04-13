@@ -4,11 +4,13 @@ import { TbBrain, TbCode } from "react-icons/tb";
 import { BsRobot, BsMortarboard } from "react-icons/bs";
 import { MdHub } from "react-icons/md";
 import "./AboutCard.css";
-import { SiSalesforce } from "react-icons/si";
+import { FaJava } from "react-icons/fa";
+
+
 
 const HIGHLIGHTS = [
   { icon: BsRobot,                label: "Agentic AI Systems",    desc: "Multi-agent pipelines, Google ADK" },
-  { icon: SiSalesforce,                label: "Salesforce Development",    desc: "Advance level salesforce solutions" },
+  { icon: FaJava,                label: "Java Full Stack Development",    desc: "Advance level Java Full Stack Solutions" },
   { icon: TbBrain,                label: "RAG Platforms",          desc: "Pinecone, LangFuse, PostgreSQL" },
   { icon: MdHub,                  label: "MCP Integrations",       desc: "Atlassian, ServiceNow, A2A" },
   { icon: GiArtificialIntelligence, label: "Voice AI",             desc: "ElevenLabs, WhisperX, SIP" },
@@ -29,44 +31,52 @@ function AboutCard() {
     <div className="ac-card">
       {/* Bio */}
       <div className="ac-bio">
-        <p>
-          Hi Everyone, I am{" "}
-          <span className="ac-accent">Sahil Dhamnaskar</span> from{" "}
-          <span className="ac-accent">Maharashtra, India.</span>
-        </p>
+      <p>
+        Hi Everyone, I am{" "}
+        <span className="ac-accent">Sahil Dhamnaskar</span> from{" "}
+        <span className="ac-accent">Maharashtra, India.</span>
+      </p>
 
-        <p>
-          I&apos;m an <span className="ac-accent">AI Engineer</span> at{" "}
-          <span className="ac-accent">Tata Consultancy Services</span>, where I
-          design and ship production-grade{" "}
-          <span className="ac-accent">agentic AI systems</span> — multi-agent
-          pipelines, RAG platforms, voice bots, and MCP integrations that drive
-          measurable impact for enterprise clients.
-        </p>
+      <p>
+        I&apos;m a <span className="ac-accent">Java Full Stack Developer & AI Engineer</span> at{" "}
+        <span className="ac-accent">Tata Consultancy Services</span>, with 2.7 years building 
+        enterprise-grade systems and 1.5 years architecting{" "}
+        <span className="ac-accent">agentic AI solutions</span>. My work spans{" "}
+        <span className="ac-accent">Spring Boot microservices</span>,{" "}
+        <span className="ac-accent">React portals</span>,{" "}
+        <span className="ac-accent">cloud-native deployments</span>, and{" "}
+        <span className="ac-accent">multi-agent AI pipelines</span> that drive measurable impact 
+        across telecom, healthcare, and automation domains.
+      </p>
 
-        <p>
-          My path here was intentional. I started as a{" "}
-          <span className="ac-accent">Salesforce Developer</span> — building
-          enterprise portals, Azure integrations, and zero-downtime migrations —
-          then moved into <span className="ac-accent">Einstein AI</span> for
-          forecasting and lead scoring, and then into{" "}
-          <span className="ac-accent">Agentforce</span>, designing secure
-          agent-to-agent communication flows. Every step was a deliberate move
-          toward autonomous, intelligent systems.
-        </p>
+      <p>
+        At <span className="ac-accent">TCS</span>, I&apos;ve engineered secure, scalable applications 
+        with Spring Boot 3.x, React.js, and PostgreSQL, containerized with Docker and deployed on{" "}
+        <span className="ac-accent">Azure Kubernetes Service</span> via GitHub Actions CI/CD. 
+        I&apos;ve built 5+ microservices with OAuth2/JWT authentication, 4 React-powered portals 
+        with reusable components, and optimized CI pipelines to cut build times by 66%.
+      </p>
 
-        <p>
-          Today that&apos;s all I do — full-time AI development using{" "}
-          <span className="ac-accent">Google ADK</span>, grounded in the clean
-          OOP discipline and enterprise instincts built over 2.5 years of
-          Salesforce work. I earned my B.Tech in{" "}
-          <span className="ac-accent">Computer Science</span> from RAIT DY Patil,
-          Navi Mumbai, and stay sharp through hands-on{" "}
-          <span className="ac-accent">R&amp;D POCs</span> and certifications
-          including <span className="ac-accent">Google ADK</span> and{" "}
-          <span className="ac-accent">Microsoft Azure AI</span>.
-        </p>
-      </div>
+      <p>
+        In parallel, I&apos;ve co-built 6 production-ready AI projects — from{" "}
+        <span className="ac-accent">RAG platforms</span> and{" "}
+        <span className="ac-accent">voice AI pipelines</span> to{" "}
+        <span className="ac-accent">multi-agent systems</span> using Google ADK, Pinecone, LangFuse, 
+        and NVIDIA infrastructure. These solutions integrate{" "}
+        <span className="ac-accent">human-in-the-loop flows</span>, contextual MCP servers, and 
+        real-time dashboards, delivering automation and productivity gains at scale.
+      </p>
+
+      <p>
+        My stack spans <span className="ac-accent">Spring Boot, FastAPI, React, Python, PostgreSQL, Docker, AKS</span>, 
+        and <span className="ac-accent">NVIDIA AI infrastructure</span> — backed by strong foundations in{" "}
+        <span className="ac-accent">DSA</span>,{" "}
+        <span className="ac-accent">System Design</span>, and{" "}
+        <span className="ac-accent">cloud-native architecture</span>. I thrive at the intersection of{" "}
+        <span className="ac-accent">enterprise engineering</span> and{" "}
+        <span className="ac-accent">agentic AI</span>.
+      </p>
+    </div>
 
       {/* Highlights grid */}
       <div className="ac-highlights">
